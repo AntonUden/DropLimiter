@@ -1,0 +1,5 @@
+name: DropLimiter
+main: net.zeeraa.droplimiter.DropLimiter
+description: Prevents certain items from dropping
+version: 1.0
+depend: [NovaCore]

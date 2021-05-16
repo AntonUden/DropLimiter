@@ -1,0 +1,5 @@
+# true to drop items, false to delete items
+DropItemsEnabledAtStart: true
+
+# If enabled the plugin will ignore the difference in upper and lower case items and worlds when comparing names
+IgnoreCase: true
