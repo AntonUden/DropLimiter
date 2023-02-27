@@ -7,7 +7,6 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
-		
 		<resources>
 			<resource>
 				<targetPath>.</targetPath>
@@ -19,7 +18,6 @@
 				</includes>
 			</resource>
 		</resources>
-		
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -29,7 +27,6 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
@@ -43,7 +40,6 @@
 					</execution>
 				</executions>
 			</plugin>
-
 			<plugin>
 				<artifactId>maven-source-plugin</artifactId>
 				<version>3.2.0</version>
@@ -57,7 +53,6 @@
 					</execution>
 				</executions>
 			</plugin>
-
 			<plugin>
 				<!-- Build an executable JAR -->
 				<groupId>org.apache.maven.plugins</groupId>
@@ -75,31 +70,27 @@
 			</plugin>
 		</plugins>
 	</build>
-
 	<repositories>
 		<repository>
 			<id>spigot-repo</id>
 			<url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
 		</repository>
-
 		<repository>
-			<id>zeeraas-repo</id>
-			<url>https://nexus.zeeraa.net/repository/maven-group/</url>
+			<id>novauniverse</id>
+			<url>https://nexus.novauniverse.net/repository/novauniverse/</url>
 		</repository>
 	</repositories>
-
 	<dependencies>
-		<dependency>
-			<groupId>net.zeeraa.novacore</groupId>
-			<artifactId>novacore-spigot</artifactId>
-			<version>1.1.0-SNAPSHOT</version>
-			<scope>provided</scope>
-		</dependency>
-
 		<dependency>
 			<groupId>org.spigotmc</groupId>
 			<artifactId>spigot-api</artifactId>
 			<version>1.8.8-R0.1-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.novauniverse.novacore</groupId>
+			<artifactId>novacore-spigot</artifactId>
+			<version>2.0.0-SNAPSHOT</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>

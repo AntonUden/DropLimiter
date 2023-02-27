@@ -18,7 +18,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import net.zeeraa.droplimiter.command.DropLimiterCommand;
 import net.zeeraa.droplimiter.config.DropLimiterConfig;
 import net.zeeraa.novacore.commons.log.Log;
-import net.zeeraa.novacore.spigot.abstraction.VersionIndependantUtils;
+import net.zeeraa.novacore.spigot.abstraction.VersionIndependentUtils;
 import net.zeeraa.novacore.spigot.command.CommandRegistry;
 import net.zeeraa.novacore.spigot.utils.ItemBuilder;
 
@@ -88,7 +88,7 @@ public class DropLimiter extends JavaPlugin implements Listener {
 
 		List<ItemStack> toDrop = new ArrayList<>();
 
-		ItemStack offHand = VersionIndependantUtils.get().getItemInOffHand(e.getEntity());
+		ItemStack offHand = VersionIndependentUtils.get().getItemInOffHand(e.getEntity());
 
 		if (offHand != null) {
 			if (offHand.getType() != Material.AIR) {
@@ -98,7 +98,7 @@ public class DropLimiter extends JavaPlugin implements Listener {
 						toDrop.add(offHand.clone());
 					}
 
-					VersionIndependantUtils.get().setItemInOffHand(e.getEntity(), ItemBuilder.AIR);
+					VersionIndependentUtils.get().setItemInOffHand(e.getEntity(), ItemBuilder.AIR);
 				}
 			}
 		}
